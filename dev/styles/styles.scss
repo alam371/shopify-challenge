@@ -1,0 +1,47 @@
+// Font Family
+$baseFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$secondFont: 'Roboto', sans-serif;
+$thirdFont: 'Merriweather', serif;
+
+// Colors
+$firstColor: #ffffff;
+$secondColor: rgb(17, 14, 31);
+$thirdColor:#7B7B7B;
+//Purple Light
+$fourthColor:#5c6ac4;
+// Purple Dark
+$fifthColor:#000639;
+// Red
+$sixthColor: #C23628;
+// Green
+$seventhColor: #7AB55C;
+
+
+// Font Sizes
+$biggestSize: 40px;
+$bigSize: 30px;
+// Title Font Size
+$regularSize: 24px;
+// Field Font Size
+$smallSize: 16px;
+$tinySize: 14px;
+
+@import "components/setup";
+@import "components/header";
+@import "components/main";
+@import "components/footer";
+@import "components/mediaquery";
+
+html{
+  font-size: 62.5%;
+  font-family: $baseFont;
+}
+
+img{
+  width: 100%;
+}
+
+.wrapper{
+  width: 1080px;
+  margin: 0 auto;
+}
