@@ -1,21 +1,71 @@
-header {
-  background: #ffffff;
-  width: 100%; }
-  header h2 {
-    font-family: "Roboto", sans-serif;
-    font-size: 30px;
-    font-weight: 400;
-    color: #110e1f;
-    text-align: center;
-    margin: 0; }
-
 html {
   font-size: 62.5%;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
-
-img {
-  width: 100%; }
+  font-family: Helvetica; }
 
 .wrapper {
-  width: 1080px;
+  width: 50%;
   margin: 0 auto; }
+
+body {
+  background: #000639;
+  width: 100%; }
+
+h1 {
+  font-size: 24px;
+  color: #ffffff; }
+
+.line {
+  width: 3%;
+  height: 2px;
+  background-color: #7AB55C; }
+
+h3 {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 400; }
+
+.inputBox {
+  display: flex; }
+
+input[type="text"] {
+  color: #7B7B7B;
+  width: 60%;
+  height: 52px;
+  margin-right: 10px;
+  border-radius: 6px;
+  font-size: 16px;
+  padding-left: 18px; }
+
+select {
+  color: #7B7B7B;
+  width: 40%;
+  height: 58px;
+  margin-left: 10px;
+  border-radius: 6px;
+  font-size: 16px; }
+
+input[type="submit"] {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: #5c6ac4;
+  border: none;
+  color: #ffffff;
+  height: 52px;
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 45px; }
+
+.confirmMessage {
+  display: none; }
+  .confirmMessage h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff; }
+  .confirmMessage p {
+    font-size: 16px;
+    color: #ffffff; }
+
+.errorMessage {
+  color: #C23628;
+  font-size: 14px; }

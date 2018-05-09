@@ -2,30 +2,72 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Shopify Challenge</title>
+	<title>Shopify Form Challenge</title>
 	<link rel="stylesheet" type="text/css" href="./public/styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<header class="wrapper">
-		<section>
-			<div>
-				<h2>Shopify Front End Developer Challenge</h2>
-				<h2>by Angeline Lam</h2>
-			</div>
-		</section>
-	</header>
-
 	<main>
-		<section class="formContainer wrapper">
-			<div id="app" class="">
-			</div>
-		</section>
+		<div>
+			<form id="marketingForm" name="form1" action="" method="get" class="wrapper">
+				<h1>Stay up to date with ecommerce trends with Shopify's newsletter</h2>
+				<p class="line"></p>
+				<div id="formTextContainer">
+					<h3>Subscribe for free marketing tips</h3>
+
+					<div class="inputBox">
+						<label for="email"></label>
+						<input id="email" type="text" placeholder="Email Address" required="true" name="email"></input>
+	
+						<label for="choices"></label>
+						<select name="choices" id="choices">
+							<option value="interested">Interested in...</option>
+							<option value="marketing">Marketing</option>
+						</select>
+					</div>
+
+					<p id="errorMessage" class="errorMessage"></p>
+
+					<input id="submit" type="submit" value="Sign up now"></input>
+				</div>
+				<div id="confirmMessage" class="confirmMessage">
+						<h2>Thanks for subscribing</h2>
+						<p>You'll start receiving free tips and resources soon.</p>
+					</div>
+			</form>
+		</div>
 	</main>
-	<footer>
-		<section></section>
-	</footer>
-	<script src="./public/scripts/app.js"></script>
+
+	<script>
+		
+		const email = document.getElementById("email")
+		const choices = document.getElementById("choices")
+		const form = document.getElementById("marketingForm")
+		const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+
+		form.addEventListener("submit", formSubmit);
+
+		function formSubmit(e){
+			e.preventDefault();
+			console.log(email.value);
+			console.log(choices.value);
+
+			if (regex.test(email.value)){
+				document.getElementById("submit").value="Submitting...";
+				setTimeout(confirm, 2000);
+				document.getElementById("submit").disabled = true;
+			}
+			else {
+				document.getElementById("errorMessage").innerHTML="Please enter a valid email address";
+			}
+		}
+
+		function confirm(){
+			document.getElementById("formTextContainer").style.display="none";
+			document.getElementById("confirmMessage").style.display="inline";
+		}
+
+	</script>
 </body>
 </html>
