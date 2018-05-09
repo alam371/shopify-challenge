@@ -48,6 +48,7 @@ body{
 h1{
   font-size: 24px;
   color: #ffffff;
+  padding-right: 30%;
 }
 
 .line{
@@ -116,3 +117,41 @@ input[type="submit"]{
   font-size: 14px;
 }
 
+@media (max-width:1050px){
+  h1{
+    padding-right: 15%; 
+  }
+  .inputBox{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  input[type="text"]{
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 10px;
+  }
+
+  select{
+    width: 100%;
+    margin: 0px;
+  }
+}
+
+@media (max-width:700px){
+  h1{
+    padding-right: 10%; 
+  }
+  .wrapper{
+    width: 85%;
+  }
+}
+
+@media (max-width:700px){
+  h1{
+    padding-right: 10%; 
+  }
+  .wrapper{
+    width: 90%;
+  }
+}
