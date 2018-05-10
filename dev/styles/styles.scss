@@ -62,10 +62,12 @@ h3{
   font-size: 16px;
   color: #ffffff;
   font-weight: 400;
+  padding-top: 5%;
 }
 
 .inputBox{
   display: flex;
+  margin-top: 4%;
 }
 
 input[type="text"]{
@@ -82,7 +84,7 @@ input[type="text"]{
 select{
   color: #7B7B7B;
   width: 40%;
-  height: 58px;
+  height: 54px;
   margin-left: 10px;
   border-radius: 5px;
   font-size: 16px;
@@ -99,7 +101,7 @@ input[type="submit"]{
   height: 52px;
   width: 100%;
   border-radius: 5px;
-  margin-top: 45px;
+  margin-top: 2%;
   border: transparent;
 }
 
